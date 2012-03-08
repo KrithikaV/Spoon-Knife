@@ -1,1 +1,38 @@
-All that's missing is the fork. Heh.
+== Rails Programming Test #1
+
+This is a small application that will be used to highlight your Ruby on Rails development knowledge. Starting with this basic application you will make a couple changes to showcase your experience with the Ruby on Rails stack: making changes to views, enhancing models and controllers, using JavaScript, and an understanding of the Rails routing engine.
+
+== Application context
+
+The application is very simple: a single model, view and controller for an entity "Company". The application uses Rails 3.1.1, is configured to use a Postgres database, and uses RSpec2 for tests. Before beginning the test you should create the necessary database locally and ensure the Company view works.
+
+== Your assignment
+
+To showcase your Ruby on Rails skills, please do the following:
+
+1. Clone the application repository from Github and create a branch called develop for the changes you will make as part of this project. As soon as you have created the branch and BEFORE you make ANY changes, push the changes to Github. *This is very important - DO NOT SKIP THIS STEP. You MUST push your develop branch BEFORE you begin any work!*
+
+2. Make the application run locally.
+
+3. Add a database migration and model to represent the concept of Employees. A company has one or more employees. Each employee should have a first name, last name, phone number and email address. The model should require the presence of first name, last name and phone number. In the employee model, create a scope called "company" that accepts a single parameter, the ID of a company, and returns all of the employees for that company.
+
+For example, if we have a Company with an ID of 12, and employees Tom Jones, Richard Smith, and Jerry Hendrick work for comapny ID 12, calling:
+
+Employee.company(12) 
+
+should return an array of ActiveRecord objects representing Tom, Richard and Jerry.
+
+Create a method that is executed after an employee is created and within the method write a log entry at INFO level saying an employee was created along with the name of the company the employee belongs to.
+
+4. Add a controller with the necessary methods to list all employees, view a specific employee, create a new employee, edit an existing employee, and delete an employee. The controller should support the functionality listed in the views described below.
+
+5. Create employee views to support the methods in the controller in #4. In the view for a new employee and to edit an existing employee, present a dropdown allowing the choice of a company based on existing companies in the database. When entering a phone number, use JavaScript to format the entry of the phone number in the following format (NNN) NNN-NNNN. The parantheses and hyphen should be automatically filled in using JavaScript, and only numbers should be allowed to be entered where the letter N appears below. You can use any jQuery plugin or custom JavaScript you would like to do this.
+
+6. Modify the "edit" view for Company to allow for a nested form. While editing a specific company, allow the user to see the employees for that company, to add a new employee for that company WITHOUT leaving the company edit view, edit the first name, last name, phone number and email address for an exisitng employy, and to delete an employee for that company WITHOUT leaving the company edit view. It is very important that the form is nested so that you can add a company and that company's employees on a single page without navigating away from the page. Any Rails gem or custom code can be used for this.
+
+7. Modify the CSS and application view layout to center all view content on the page with a width of 600 pixels.
+
+8. Create RSpec controller tests for the index, new/create, show and edit/update views for the Employee controller and your changes to the edit/update view/controller for nested forms.
+
+9. Commit your code and push your changes to Github. *This is very important - DO NOT SKIP THIS STEP. You MUST push your changes as soon as you complete your work!*
+
