@@ -4,7 +4,7 @@ development:
   adapter: postgresql
   encoding: unicode
   host: localhost
-  database: rails_test1 
+  database: rails_test1  
   pool: 5
   username: postgres
   password: muthu123
