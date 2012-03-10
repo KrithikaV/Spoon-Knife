@@ -1,6 +1,10 @@
 class CompaniesController < ApplicationController
   # GET /companies
+<<<<<<< HEAD
   # GET /companies.json 
+=======
+  # GET /companies.json
+>>>>>>> origin/develop
   def index
     @companies = Company.all
 

@@ -11,7 +11,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(:version => 20120308070244) do
+=======
+ActiveRecord::Schema.define(:version => 20120216043127) do
+>>>>>>> origin/develop
 
   create_table "companies", :force => true do |t|
     t.string   "name"
@@ -21,6 +25,7 @@ ActiveRecord::Schema.define(:version => 20120308070244) do
     t.datetime "updated_at"
   end
 
+<<<<<<< HEAD
   create_table "employees", :force => true do |t|
     t.string   "firstname"
     t.string   "lastname"
@@ -31,4 +36,6 @@ ActiveRecord::Schema.define(:version => 20120308070244) do
     t.datetime "updated_at"
   end
 
+=======
+>>>>>>> origin/develop
 end

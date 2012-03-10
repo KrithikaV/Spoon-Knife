@@ -4,10 +4,17 @@ development:
   adapter: postgresql
   encoding: unicode
   host: localhost
+<<<<<<< HEAD
   database: rails_test1  
   pool: 5
   username: postgres
   password: muthu123
+=======
+  database: rails_test1 
+  pool: 5
+  username: volpine
+  password: password
+>>>>>>> origin/develop
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -15,11 +22,19 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
+<<<<<<< HEAD
   host: 127.0.0.1
   database: rails_test1_test
   pool: 5
   username: postgres
   password: muthu123
+=======
+  host: localhost
+  database: rails_test1_test
+  pool: 5
+  username: volpine
+  password: password
+>>>>>>> origin/develop
 
 production:
   adapter: sqlite3
