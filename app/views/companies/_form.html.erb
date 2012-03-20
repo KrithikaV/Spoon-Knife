@@ -1,4 +1,5 @@
-<%= form_for(@company) do |f| %>
+<div style="margin:auto; width:400px;font-size:14px; border:1px solid #000;padding:20px 0px 10px 0px;">
+<%= form_for @company,:html =>{:id =>'frmuser', :multipart => true} do |f| %>
   <% if @company.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@company.errors.count, "error") %> prohibited this company from being saved:</h2>
@@ -10,20 +11,25 @@
       </ul>
     </div>
   <% end %>
+<div style="text-align:center;">
+  <p >
+    <%= f.label :name, "Name" %><br />
+    <%= f.text_field :name,:class =>"validate[required]"%>
+  </p>
+  <p >
+    <%= f.label :address, "Address" %><br />
+    <%= f.text_field :address,:class =>"validate[required]"%>
+  </p>
+  <p >
+    <%= f.label :phone, "phone" %><br />
+    <%= f.text_field :phone,:class =>"validate[required]"%>
+  </p>
 
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :address %><br />
-    <%= f.text_field :address %>
-  </div>
-  <div class="field">
-    <%= f.label :phone %><br />
-    <%= f.text_field :phone %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+
+ 
+<p><%= f.submit "Submit" %>
+  <input type="reset" value="Reset" />
+</p>
+</div>
 <% end %>
+</div>

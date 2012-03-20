@@ -1,10 +1,14 @@
 RailsTest1::Application.routes.draw do
-<<<<<<< HEAD
-  resources :companies 
-=======
-  resources :companies
->>>>>>> origin/develop
 
+	resources :companies do
+	  resources :employees
+		
+   	end
+
+	match '/home/checkcompanynamedata/'=> "home#checkcompanynamedata", :as => :checkcompanynamedata
+
+   resources :home
+ root :to => 'home#index'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -54,11 +58,7 @@ RailsTest1::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-<<<<<<< HEAD
-   root :to => 'companies#index'
-=======
   # root :to => 'welcome#index'
->>>>>>> origin/develop
 
   # See how all your routes lay out with "rake routes"
 

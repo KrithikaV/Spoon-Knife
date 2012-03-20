@@ -11,31 +11,25 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(:version => 20120308070244) do
-=======
-ActiveRecord::Schema.define(:version => 20120216043127) do
->>>>>>> origin/develop
+ActiveRecord::Schema.define(:version => 20120316104541) do
 
   create_table "companies", :force => true do |t|
     t.string   "name"
     t.string   "address"
     t.string   "phone"
+    t.integer  "employee_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-<<<<<<< HEAD
   create_table "employees", :force => true do |t|
-    t.string   "firstname"
-    t.string   "lastname"
-    t.string   "phoneno"
-    t.string   "email"
-    t.integer  "cid"
+    t.string   "first_name", :limit => 50
+    t.string   "last_name",  :limit => 50
+    t.integer  "phone_no"
+    t.string   "email",      :limit => 50
+    t.integer  "company_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-=======
->>>>>>> origin/develop
 end

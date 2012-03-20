@@ -1,12 +1,8 @@
 class CompaniesController < ApplicationController
   # GET /companies
-<<<<<<< HEAD
-  # GET /companies.json 
-=======
   # GET /companies.json
->>>>>>> origin/develop
   def index
-    @companies = Company.all
+    @companies = Company.paginate(:per_page => 2, :page => params[:page])
 
     respond_to do |format|
       format.html # index.html.erb
@@ -18,6 +14,7 @@ class CompaniesController < ApplicationController
   # GET /companies/1.json
   def show
     @company = Company.find(params[:id])
+    #@employee= @category.products.all
 
     respond_to do |format|
       format.html # show.html.erb
@@ -47,8 +44,8 @@ class CompaniesController < ApplicationController
     @company = Company.new(params[:company])
 
     respond_to do |format|
-      if @company.save
-        format.html { redirect_to @company, notice: 'Company was successfully created.' }
+      if @company.save 
+        format.html { redirect_to companies_path, notice: 'Company was successfully created.' }
         format.json { render json: @company, status: :created, location: @company }
       else
         format.html { render action: "new" }
@@ -64,7 +61,7 @@ class CompaniesController < ApplicationController
 
     respond_to do |format|
       if @company.update_attributes(params[:company])
-        format.html { redirect_to @company, notice: 'Company was successfully updated.' }
+        format.html { redirect_to companies_path, notice: 'Company was successfully updated.' }
         format.json { head :ok }
       else
         format.html { render action: "edit" }

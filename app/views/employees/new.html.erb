@@ -1,4 +1,4 @@
-<html>
+ <html>
   <head>
     <%= javascript_include_tag "jquery-validation/jquery.js"%>
     <%= javascript_include_tag "jquery-validation/jquery.validationEngine.js" %>
@@ -17,8 +17,9 @@
     </script>
   </head>
 <body>
+<h1 style="padding:0px 0px 10px 0px ; text-align:center;"><b>New Employee</b></h1>
+<%= render :partial => 'form' %>
 
-<h1 style="padding:0px 0px 10px 0px ; text-align:center;"><b>New company</b></h1>
-<%= render 'form' %>
-
-<%= link_to 'Back', companies_path %>
+<p><%= link_to "Back to List", new_company_employee_path %></p>
+</body>
+</html>

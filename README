@@ -1,3 +1,5 @@
+== IMPORTANT: READ ALL INSTRUCTIONS AND EMAIL QUESTIONS BEFORE BEGINNING CODING. You are being evaluated on completing ALL steps of the assignment below!
+
 == Rails Programming Test #1
 
 This is a small application that will be used to highlight your Ruby on Rails development knowledge. Starting with this basic application you will make a couple changes to showcase your experience with the Ruby on Rails stack: making changes to views, enhancing models and controllers, using JavaScript, and an understanding of the Rails routing engine.
@@ -10,7 +12,7 @@ The application is very simple: a single model, view and controller for an entit
 
 To showcase your Ruby on Rails skills, please do the following:
 
-1. Clone the application repository from Github and create a branch called develop for the changes you will make as part of this project. As soon as you have created the branch and BEFORE you make ANY changes, push the changes to Github. *This is very important - DO NOT SKIP THIS STEP. You MUST push your develop branch BEFORE you begin any work!*
+1. Fork this repository in GitHub. From YOUR fork of the code, clone the application repository to your local machine from Github and create a branch called develop for the changes you will make as part of this project. As soon as you have created the branch and BEFORE you make ANY changes, push the changes to Github. *This is very important - DO NOT SKIP THIS STEP. You MUST push your develop branch BEFORE you begin any work!*
 
 2. Make the application run locally.
 
@@ -30,7 +32,7 @@ Create a method that is executed after an employee is created and within the met
 
 6. Modify the "edit" view for Company to allow for a nested form. While editing a specific company, allow the user to see the employees for that company, to add a new employee for that company WITHOUT leaving the company edit view, edit the first name, last name, phone number and email address for an exisitng employy, and to delete an employee for that company WITHOUT leaving the company edit view. It is very important that the form is nested so that you can add a company and that company's employees on a single page without navigating away from the page. Any Rails gem or custom code can be used for this.
 
-7. Modify the CSS and application view layout to center all view content on the page with a width of 600 pixels.
+7. Modify the CSS and application view layout to center all view content on the page with a width of 600 pixels. Make all input boxes be highlighted in color #fc9fff when they have focus.
 
 8. Create RSpec controller tests for the index, new/create, show and edit/update views for the Employee controller and your changes to the edit/update view/controller for nested forms.
 

@@ -1,5 +1,24 @@
-<h1>Editing company</h1>
+<html>
+  <head>
+    <%= javascript_include_tag "jquery-validation/jquery.js"%>
+    <%= javascript_include_tag "jquery-validation/jquery.validationEngine.js" %>
+    <%= javascript_include_tag "jquery-validation/jquery.validationEngine-en.js" %>
+    <%= stylesheet_link_tag "jquery-validation/validationEngine.jquery.css" %>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Lets Meet</title>
+    
 
+    <script type="text/javascript">
+        jQuery.noConflict();
+        jQuery(document).ready(function(){
+        jQuery("#frmuser").validationEngine();
+      });
+    </script>
+  </head>
+<body>
+
+<h1 style="padding:0px 0px 10px 0px ; text-align:center;"><b>Editing company</b></h1>
 <%= render 'form' %>
 
 <%= link_to 'Show', @company %> |

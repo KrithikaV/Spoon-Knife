@@ -1,0 +1,29 @@
+<h1 style="padding:0px 0px 10px 0px ; text-align:center;"><b>Employee</b></h1>
+
+<table align="center">
+ <tr>
+    <th>First_name</th>
+    <th>Last_name</th>
+    <th>Email</th>
+    <th>Phone_no</th>
+ 
+  </tr>
+
+<% @employees.each do |employee| %>
+  <tr>
+    <td><%= employee.first_name %></td>
+    <td><%= employee.last_name %></td>
+    <td><%= employee.email%></td>
+    <td><%= employee.phone_no%></td>
+     <td><%#= link_to 'Show', [@company,employee] %></td>
+ <td><%= link_to 'Edit', edit_company_employee_path(employee, @company) %></td>
+<td><%= link_to 'Destroy',[@company,employee], confirm: 'Are you sure?', method: :delete %></td>
+ <td><%#= link_to "Destroy", employee, :confirm => 'Are you sure?', :method => :delete %> </td>
+         
+ </tr>
+<% end %>
+</table>
+
+
+
+<p><%= link_to "New Employee", new_company_employee_path %></p>
