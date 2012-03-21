@@ -1,5 +1,7 @@
 RailsTest1::Application.routes.draw do
 
+  resources :posts
+
 	resources :companies do
 	  resources :employees
 		

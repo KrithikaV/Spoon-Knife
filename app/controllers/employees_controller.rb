@@ -35,7 +35,7 @@ class EmployeesController < ApplicationController
   
   def edit
     @company = Company.find(params[:company_id])
-    @employee = @company.employee.find(params[:id])
+    @employee = @company.employees.find(params[:id])
   end
   
 
@@ -45,7 +45,7 @@ class EmployeesController < ApplicationController
    @company = Company.find(params[:company_id])
     @employee = @company.employees.find(params[:id])
       if @employee.update_attributes(params[:employee])
-	redirect_to employees_path
+	redirect_to company_employees_path
 
       else
         render action: "edit" 
